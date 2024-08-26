@@ -30,12 +30,8 @@ jobs:
         npm audit fix
         npm fund
         npm run build --if-present
-    - name: List build directory
-      run: |
-        cd actions-runner/_work/market
-        ls -la actions-runner/_work/market/market/dist/
 
     - name: Copy build files to web server directory
       run: |
         cd actions-runner/_work/market
-        sudo cp -r actions-runner/_work/market/market/dist/* /var/www/html/
+        sudo cp -r /home/ubuntu/actions-runner/_work/market/market/dist/* /var/www/html/
