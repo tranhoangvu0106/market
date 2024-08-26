@@ -33,4 +33,5 @@ jobs:
 
     - name: Copy build files to web server directorys
       run: |
+        sudo rm -rf /var/www/html/*
         sudo cp -r /home/ubuntu/actions-runner/_work/market/market/dist/* /var/www/html/
